@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/glConfirmOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbConfirmOrder"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbConfirmOrder"
+            app:srcCompat="@drawable/fakelogo" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <TextView
+            android:id="@+id/tvConfirmOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Confirm  Order :"
+            android:textColor="#070707"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <ImageView
+            android:id="@+id/imgUserIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="28dp"
+            android:contentDescription="@string/img"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvConfirmOrder"
+            app:srcCompat="@drawable/usericon" />
+
+        <TextView
+            android:id="@+id/tvNameLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="Your Name Is"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgUserIcon"
+            app:layout_constraintTop_toTopOf="@+id/imgUserIcon" />
+
+        <TextView
+            android:id="@+id/tvUserNameLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Jane Doe"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvNameLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameLable" />
+
+        <ImageView
+            android:id="@+id/imgDeliIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imgUserIcon"
+            app:srcCompat="@drawable/deliveryicon" />
+
+        <TextView
+            android:id="@+id/tvDeliLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="Delivery Address"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgDeliIcon"
+            app:layout_constraintTop_toTopOf="@+id/imgDeliIcon" />
+
+        <TextView
+            android:id="@+id/tvUserAddressLable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="102dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginTop="2dp"
+            android:text="Apartment No.231,No.1 Main Road,Seattle, Washington"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvDeliLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvDeliLable" />
+
+        <ImageView
+            android:id="@+id/imgPhone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imgDeliIcon"
+            app:srcCompat="@drawable/phone" />
+
+        <TextView
+            android:id="@+id/tvPhoneLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:text="PhoneNumber"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgPhone"
+            app:layout_constraintTop_toTopOf="@+id/imgPhone" />
+
+        <TextView
+            android:id="@+id/tvUserPhoneLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="09979044627"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvPhoneLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvPhoneLable" />
+
+        <ImageView
+            android:id="@+id/imgTotalItem"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imgPhone"
+            app:srcCompat="@drawable/totalitem" />
+
+        <TextView
+            android:id="@+id/tvTotalItemLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:text="Total Items/Quantity"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgTotalItem"
+            app:layout_constraintTop_toTopOf="@+id/imgTotalItem" />
+
+        <TextView
+            android:id="@+id/tvUserTotalItemLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="2/4"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTotalItemLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalItemLable" />
+
+        <ImageView
+            android:id="@+id/imgTotalPrice"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imgTotalItem"
+            app:srcCompat="@drawable/totalprice" />
+
+        <TextView
+            android:id="@+id/tvTotalPriceLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:text="Total Price"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgTotalPrice"
+            app:layout_constraintTop_toTopOf="@+id/imgTotalPrice" />
+
+        <TextView
+            android:id="@+id/tvUserTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="$66.6"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvTotalPriceLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalPriceLable" />
+
+        <ImageView
+            android:id="@+id/imgOrderItem"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/imgTotalPrice"
+            app:srcCompat="@drawable/orderitem" />
+
+        <TextView
+            android:id="@+id/tvOrderItemLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:text="Order Items"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/imgOrderItem"
+            app:layout_constraintTop_toTopOf="@+id/imgOrderItem" />
+
+        <TextView
+            android:id="@+id/tvUserOrderItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Total Quantity:4"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/tvOrderItemLable"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrderItemLable" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmOrder"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/confirmorder"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUserOrderItem"
+            app:icon="@drawable/nexticon"
+            app:iconSize="@android:dimen/app_icon_size"
+            android:layoutDirection="rtl"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
